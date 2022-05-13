@@ -18,7 +18,8 @@
           <a class="navbar-brand" href="{% url 'home' %}">Inventory Tracker</a>
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center
             mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-dark">+ New Item</a></li>
+            <li><a href="{% url 'item_new' %}" class="nav-link px-2 link-dark">+ New Item</a></li>
+            <li><a href="{% url 'location_new' %}" class="nav-link px-2 link-dark">+ New Location</a></li>
           </ul>        
         </div>
       </div>

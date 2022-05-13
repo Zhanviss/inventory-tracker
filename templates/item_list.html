@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Items{% endblock title %}
+
+{% block content %}
+{% for item in item_list %}
+  <div class="card">
+    <div class="card-header">
+      <span class="font-weight-bold">{{ item.title }}</span> &middot;
+      <span class="text-muted"> Location: {{ item.location }} |
+      Date: {{ item.date }}</span>
+    </div>
+    <div class="card-body">
+        <!-- Changes start here! -->
+        <p>{{ item.body }}</p>
+        <a href="{% url 'item_edit' item.pk %}">Edit</a> |
+        <a href="{% url 'item_delete' item.pk %}">Delete</a>
+    </div>
+  </div>
+  <br />
+{% endfor %}
+{% endblock content %}

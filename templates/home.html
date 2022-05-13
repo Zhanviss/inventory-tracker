@@ -1,6 +1,15 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
-{% block title %}Home{% endblock title %}
+{% block title %}Main Page{% endblock title %}
 {% block content %}
-Hi!
+<div class="jumbotron">
+<h1 class="display-4">Inventory Tracking Web App</h1>
+<p class="lead">An Inventory Tracker website built by Zhansultan Assemzhar.</p>
+<p class="lead">
+<a class="btn btn-primary btn-lg" href="{% url 'item_list' %}"
+role="button">View All Items</a>
+<a class="btn btn-primary btn-lg" href="{% url 'location_list' %}"
+role="button">View All Warehouses Location</a>
+</p>
+</div>
 {% endblock content %}

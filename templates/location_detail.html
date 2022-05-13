@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="location-entry">
+  <h2>Warehouse</h2>
+  <p>Located at {{ object.country }} , {{ object.town }}</p>
+</div>
+
+<p><a href="{% url 'location_edit' object.pk %}">Edit</a> |
+  <a href="{% url 'location_delete' object.pk %}">Delete</a></p>
+<p>Back to <a href="{% url 'location_list' %}">All Warehouses</a>.</p>
+{% endblock content %}
